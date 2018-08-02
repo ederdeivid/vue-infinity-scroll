@@ -10,6 +10,7 @@
       :visSmallScreen="visSmallScreen"
       :visLargeScreen="visLargeScreen"
       :visMidScreen="visMidScreen"
+      :visAllScreen="visAllScreen"
       :buttonClass="buttonClass"
       :buttonIcon="buttonIcon"
       @scroll="onScroll">
@@ -28,7 +29,7 @@ export default {
     },
     visHeight: {
       type: String,
-      default: 'height: 300px;'
+      default: 'height: 50vh;'
     },
     hasNextPage: {
       type: Boolean,
@@ -54,6 +55,9 @@ export default {
     visMidScreen: {
       type: String
     },
+    visAllScreen: {
+      type: String
+    },
     buttonIcon: {
       type: String
     }
@@ -61,7 +65,7 @@ export default {
   name: 'vue-infinity-scroll',
   data () {
     return {
-      defaultStyle: 'height: 300px; overflow-y: scroll',
+      defaultStyle: 'height: 50vh; overflow-y: scroll',
       height: ''
     }
   },
@@ -91,11 +95,11 @@ export default {
     getWindowHeight (event) {
       let windowHeight = document.documentElement.clientHeight
       if (windowHeight < 1000 > 768) {
-        this.height = this.visMidScreen
+        this.visAllScreen.length ? this.height = this.visAllScreen : this.height = this.visMidScreen
       } else if (windowHeight < 768) {
-        this.height = this.visSmallScreen
+        this.visAllScreen.length ? this.height = this.visAllScreen : this.height = this.visSmallScreen
       } else {
-        this.height = this.visLargeScreen
+        this.visAllScreen.lenght ? this.height = this.visAllScreen : this.height = this.visLargeScreen
       }
     },
   },

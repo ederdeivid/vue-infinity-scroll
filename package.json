@@ -1,11 +1,11 @@
 {
   "name": "vue-infinity-scroll",
   "version": "1.0.0",
-  "description": "",
+  "description": "Vue infinity scroll package",
   "main": "VueInfinityScroll.vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Eder Deivid",
+  "author": "Eder Deivid <ederdeivid89@gmail.com>",
   "license": "ISC"
 }
