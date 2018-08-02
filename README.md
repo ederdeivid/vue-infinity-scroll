@@ -10,7 +10,15 @@ npm i vue-infinity-scroll
 ```vue
 <template>
   <div>
-    <vue-infinity-scroll :hasNextPage="true" visClass="panel panel-default" visAllScreen="50vh" @scrolling="scrolling">
+    <vue-infinity-scroll
+      :hasNextPage="true"
+      visClass="panel panel-default"
+      visAllScreen="50vh"
+      @scrolling="scrolling"
+      buttonText="Go to Top"
+      buttonClass="btn btn-primary"
+      buttonIcon="fa fa-arrow-up"
+    >
       // your things here
     </vue-infinity-scroll>
   </div>
