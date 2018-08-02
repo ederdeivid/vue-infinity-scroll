@@ -41,7 +41,7 @@ export default {
 ## All Properties
 
 ```code
-  :hasNextPage # Here u can use to see if u request has a next page to go
+  :hasNextPage // Here u can use to see if u request has a next page to go
   @scrolling # that event is emited when the scroll down has ended
   :class # Yor class
   :buttonText # When u scroll down your vue-infinity-scroll u'll see a button to go to top, u can change the name of button using that props
