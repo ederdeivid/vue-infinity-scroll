@@ -43,7 +43,7 @@ export default {
       type: String
     },
     buttonText: {
-      type: String
+      type: String,
       default: 'Go to top'
     },
     visSmallScreen: {
