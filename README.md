@@ -40,7 +40,7 @@ export default {
 
 ## All Properties
 
-```jade
+```code
   :hasNextPage # Here u can use to see if u request has a next page to go
   @scrolling # that event is emited when the scroll down has ended
   :class # Yor class
