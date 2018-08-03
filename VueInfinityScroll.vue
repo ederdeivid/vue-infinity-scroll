@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{ defaultStyle }}
     <div
       :height="height"
       :class="visClass"
@@ -28,8 +29,7 @@ export default {
       type: String
     },
     visHeight: {
-      type: String,
-      default: 'height: 50vh;'
+      type: String
     },
     hasNextPage: {
       type: Boolean,
@@ -40,26 +40,32 @@ export default {
       default: false
     },
     buttonClass: {
-      type: String
+      type: String,
+      default: ''
     },
     buttonText: {
       type: String,
       default: 'Go to top'
     },
     visSmallScreen: {
-      type: String
+      type: String,
+      default: ''
     },
     visLargeScreen: {
-      type: String
+      type: String,
+      default: ''
     },
     visMidScreen: {
-      type: String
+      type: String,
+      default: ''
     },
     visAllScreen: {
-      type: String
+      type: String,
+      default: ''
     },
     buttonIcon: {
-      type: String
+      type: String,
+      default: ''
     }
   },
   name: 'vue-infinity-scroll',
@@ -71,9 +77,9 @@ export default {
   },
   mounted () {
     this.onScroll()
+    this.getWindowHeight()
     this.$nextTick(() => {
       window.addEventListener('resize', this.getWindowHeight)
-      this.height = '50vh'
       this.getWindowHeight()
     })
   },
@@ -94,14 +100,15 @@ export default {
 
     getWindowHeight (event) {
       let windowHeight = document.documentElement.clientHeight
-      if (windowHeight < 1000 > 768) {
+      console.log(windowHeight)
+      if (windowHeight < 1000 && windowHeight > 768) {
         this.visAllScreen.length ? this.height = this.visAllScreen : this.height = this.visMidScreen
       } else if (windowHeight < 768) {
         this.visAllScreen.length ? this.height = this.visAllScreen : this.height = this.visSmallScreen
       } else {
-        this.visAllScreen.lenght ? this.height = this.visAllScreen : this.height = this.visLargeScreen
+        this.visAllScreen.length ? this.height = this.visAllScreen : this.height = this.visLargeScreen
       }
-    },
+    }
   },
   watch: {
     height (vl) {
