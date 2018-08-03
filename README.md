@@ -48,10 +48,10 @@ export default {
 
 </script>
 ```
-## Options
+# Options
 
 | Option | Expect | Description |
-| ----- | ----- |
+| ----- | ----- | ----- |
 | :hasNextPage | Boolean | Here u can use to see if u request has a next page to go |
 | @scrolling | Function | that event is emited when the scroll down has ended |
 | :class | String | Yor class |
