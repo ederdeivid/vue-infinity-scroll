@@ -25,10 +25,12 @@
 export default {
   props: {
     visClass: {
-      type: String
+      type: String,
+      default: ''
     },
     visHeight: {
-      type: String
+      type: String,
+      default: ''
     },
     hasNextPage: {
       type: Boolean,

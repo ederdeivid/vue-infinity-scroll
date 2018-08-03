@@ -53,7 +53,7 @@ export default {
 ```bash
   :hasNextPage (Boolean) # Here u can use to see if u request has a next page to go
   @scrolling (Function) # that event is emited when the scroll down has ended
-  :class (String) # Yor class
+  :visClass (String) # Yor class
   :buttonText (String) # When u scroll down your vue-infinity-scroll u'll see a button to go to top, u can change the name of button using that props
   :buttonClass (String) # U can add yout class to button. Bootstrap example: "btn btn-sm btn-primary"
   :buttonIcon (String) # Icon to your button. Font-Awesome Example: "fa fa-arrow-up"
