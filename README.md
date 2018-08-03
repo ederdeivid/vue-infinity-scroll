@@ -1,7 +1,8 @@
 # vue-infinity-scroll [![npm](https://img.shields.io/npm/v/vue-multiselect.svg)](https://www.npmjs.com/package/vue-infinity-scroll)
 Probably the most complete *Infinity Scroll* component for Vue.js 2.0.
 
-**NOTE: All Versions before 1.0.5 doesn't work**
+## NOTE:
+ **All Versions before 1.0.5 doesn't work**
 
 ## Install & basic usage
 
