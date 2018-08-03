@@ -99,7 +99,6 @@ export default {
 
     getWindowHeight (event) {
       let windowHeight = document.documentElement.clientHeight
-      console.log(windowHeight)
       if (windowHeight < 1000 && windowHeight > 768) {
         this.visAllScreen.length ? this.height = this.visAllScreen : this.height = this.visMidScreen
       } else if (windowHeight < 768) {
