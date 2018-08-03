@@ -1,6 +1,5 @@
 <template>
   <div>
-    {{ defaultStyle }}
     <div
       :height="height"
       :class="visClass"
