@@ -47,7 +47,6 @@ export default {
 ```
 
 ## All Properties
-
 ```bash
   :hasNextPage (Boolean) # Here u can use to see if u request has a next page to go
   @scrolling (Function) # that event is emited when the scroll down has ended
@@ -60,5 +59,4 @@ export default {
   :visLargeScreen (String) # The same of visSmallScreen but to large screen (bigger than 1000px)
   :visAllScreen (String) # Define only one height to all screen size
   :resetScroll (Boolean) # Can be util if u want do a new request and reset the current scroll (If u dont use, new request will jump to same before position)
-
 ```
