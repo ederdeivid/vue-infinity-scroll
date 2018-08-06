@@ -1,6 +1,6 @@
 {
   "name": "vue-infinity-scroll",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Vue infinity scroll package",
   "main": "VueInfinityScroll.vue",
   "scripts": {
