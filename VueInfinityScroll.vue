@@ -12,10 +12,11 @@
       :visMidScreen="visMidScreen"
       :visAllScreen="visAllScreen"
       :buttonClass="buttonClass"
+      :btnVisible="btnVisible"
       :buttonIcon="buttonIcon"
       @scroll="onScroll">
       <slot></slot>
-      <button @click.prevent="toTop" class="to-top" :class="buttonClass" title="Ir ao Topo">
+      <button @click.prevent="toTop" class="to-top" :class="buttonClass" :title="buttonText" v-if="btnVisible">
         <i :class="buttonIcon" /> {{ buttonText }}
       </button>
     </div>
@@ -39,6 +40,10 @@ export default {
     resetScroll: {
       type: Boolean,
       default: false
+    },
+    btnVisible: {
+      type: Boolean,
+      default: true
     },
     buttonClass: {
       type: String,
